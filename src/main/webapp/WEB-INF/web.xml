@@ -7,4 +7,8 @@
         <servlet-name>UsuarioServlet</servlet-name>
         <servlet-class>com.gugawag.pdist.servlets.UsuarioServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>MensagemServlet</servlet-name>
+        <servlet-class>com.gugawag.pdist.servlets.UsuarioServlet</servlet-class>
+    </servlet>
 </web-app>
