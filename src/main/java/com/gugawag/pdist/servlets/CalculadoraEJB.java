@@ -2,6 +2,7 @@ package com.gugawag.pdist.servlets;
 
 import jakarta.ejb.EJB;
 import jakarta.servlet.annotation.WebServlet;
+import models.CalculadoraIF;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -16,7 +17,10 @@ public class CalculadoraEJB extends jakarta.servlet.http.HttpServlet{
             throws jakarta.servlet.ServletException, IOException {
         String firstNumber = request.getParameter("num1");
         String secondNumber = request.getParameter("num2");
+        String operacao = request.getParameter("oper");
         PrintWriter resposta = response.getWriter();
-        resposta.println(calculadora.somar(firstNumber,secondNumber));
+        if(operacao.equals("somar")){
+            resposta.println(calculadora.somar(Integer.parseInt(firstNumber), Integer.parseInt(secondNumber)));
+        }
     }
 }
